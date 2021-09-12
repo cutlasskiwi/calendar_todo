@@ -1,9 +1,12 @@
 {
+  "homepage": "http://{cutlasskiwi}.github.io/{calendar_todo}",
   "name": "calendar_todo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "webpack serve --hot --open --mode development",
     "build": "webpack --config webpack.config.js --mode production"
   },
@@ -25,5 +28,8 @@
     "webpack": "^5.52.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.2.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
